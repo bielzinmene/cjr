@@ -6,6 +6,41 @@
     <title>Pergunte à foca</title>
 </head>
 <body>
+
+    <h1>Pergunte à foca</h1>
+    <img height=380px src="sorridente-personagem-foca-da-groenlândia.webp" alt="foca">
+    <div>
+        <input type="text" class="choice1"> ou <input type="text" class="choice2">
+    </div>
     
+    <button type="button" onclick="escolha_foca()"> Perguntar </button>
+
 </body>
 </html>
+
+<style>
+
+    button {
+	    background-color: rgb(253, 253, 253);
+    }
+
+    body {
+	    background-color: #800080;
+	    text-align: center;
+    }
+
+	
+</style>
+
+<script>
+
+    function escolha_foca(){
+        var escolha = Math.floor(Math.random() * 10);
+
+        if (escolha%2)
+	        alert("A foca escolheu "+document.querySelector(".choice1").value)
+        else
+	        alert("A foca escolheu "+document.querySelector(".choice2").value)
+    }
+	
+</script>
